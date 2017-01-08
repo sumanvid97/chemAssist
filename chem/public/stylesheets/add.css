@@ -1,0 +1,24 @@
+.section-heading {
+	border-bottom:1%;
+	solid:#6ADAE1;
+	color:#E63714;
+	font-weight:bold;
+	font-size:175%
+}
+.buttons{
+	margin-top: 2%;
+}
+.call-to-action{
+	position: absolute;
+	margin: auto;
+	top: 30%;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+@media only screen 
+	and (max-width: 768px) {
+	.call-to-action{
+		margin-top: 30%;
+	}	
+}

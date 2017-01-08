@@ -1,1 +1,57 @@
-<p>ChemAssist</p>
+<head>
+    <link href="/stylesheets/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/add.css"></link>
+    <title>ChemAssist</title>
+</head>
+<div class="call-to-action" align="center" ng-hide="isHidden">
+    <div class="col-lg-12 text-center" style="margin-bottom:2%">
+        <span class="section-heading" style="">Add a Medicine</span>
+    </div>
+    <div>
+        <div class="text-center" style="width:100%">
+            <form name="regForm" role="form">
+                    
+                    <div class="col-lg-12">
+                        <div align="center" class="form-group col-lg-4 col-lg-offset-4" style="text">  
+                            <input class="form-control" name="name" placeholder="Medicine" ng-model="medicines.medi_name" required>
+                        </div>
+                        <div class="col-lg-4" style="margin-left:-2.5%">
+                            <span class="required col-lg-4 help-block text-left hidden-sm"  ng-show="regForm.name.$touched && regForm.name.$invalid">Required Field</span>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12">
+                        <div align="center" class="form-group col-lg-4 col-lg-offset-4" style="text">       
+                            <input class="form-control" name="quantity" placeholder="No. of Pills" ng-model="medicines.pill_no" required>
+                        </div>
+                        <div class="col-lg-4" style="margin-left:-2.5%">
+                            <span class="required col-lg-4 help-block text-left hidden-sm" ng-show="regForm.quantity.$touched && regForm.quantity.$invalid">Required Field</span>
+                        </div>
+                    </div>
+                    <label class="checkbox-inline">
+				    	<input type="checkbox" value="">Option 1
+				    </label>
+				    <label class="checkbox-inline">
+				      	<input type="checkbox" value="">Option 2
+				    </label>
+				    <label class="checkbox-inline">
+				     	<input type="checkbox" value="">Option 3
+				    </label>
+                    
+                </div>
+
+    
+                <div class="buttons col-lg-4 col-lg-offset-4" align="center">
+                    <button type="submit" class="btn btn-primary" align="center" ng-click="save()"  ng-click="thanks()" ng-disabled="regForm.$invalid">Submit</button>   
+                    <button type="reset" class="btn btn-primary" align="center" ng-click="clear()">Clear</button>
+                </div>
+    
+            </form>
+        </div>
+    </div>
+</div>
+<div style="margin-top:15%" ng-show="isHidden">    
+    <h1 align="center">Thank You!</h1>
+    <h2 align="center">You've been registered successfully.</h2>
+</div>
