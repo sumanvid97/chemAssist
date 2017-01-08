@@ -6,3 +6,68 @@ body {
 a {
   color: #00B7FF;
 }
+
+/*////////////////////////////////////////////////////////////////////////////////////
+                Home Page
+////////////////////////////////////////////////////////////////////////////////////*/
+
+body{
+  background-color: #fffeee;
+}
+.navbar {
+  width: 100%;
+  left:0;
+  display:table;
+}
+.navbar .active#tab{
+	background-color: #ddddee;	
+}
+
+#tab {
+  display:table-cell;
+  text-decoration: none;
+  text-align: center;
+  width: 12.5%;
+  height: 50px;
+  font-family: ParagonCleanersM;
+  font-size: 80%;
+  cursor: pointer;
+  color: red;
+  padding-top: 0.45%;
+  padding-bottom: 0.175%;
+  margin-left: 0.15%;
+  text-transform: uppercase;
+  vertical-align: middle;
+  background-color: #eeeeee;
+}
+#tab a {
+  color: red;
+  text-decoration: none;
+  text-align: center;
+  vertical-align: top;
+  height: 25px;
+  width: 100px;
+}
+#tab a:hover, #tab a:active, #tab a:visited, #tab a:link {
+  color: red;
+  text-decoration: none;
+}
+
+.btnn{
+	background-color: #ddeec6;
+	border-radius: 5px;
+	border-width: 4px;
+	border-color: black;
+	text-align: center;
+	font-size: 25px;
+	color: black;
+}
+.btnn a{
+	text-decoration: none;
+	color:black;
+	cursor: pointer;
+}
+#pic_collection{
+	display: inline-table;
+	padding-right: 50px;
+}

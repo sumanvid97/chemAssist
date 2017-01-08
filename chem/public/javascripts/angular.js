@@ -31,13 +31,14 @@ app.controller('HomeCtrl',['$scope', '$resource', function($scope, $resource){
 	});
 }]);
 app.controller('AddCtrl',['$scope', '$resource', '$location', function($scope, $resource, $location){
-	$scope.save =function(isValid){
-		if(isValid){
-			var resource_api = $resource('api/medicines');
-			resource_api.save($scope.medicine,function(){
-				$location.path('/');
-			});
+	$scope.save =function(){
+		if($scope.medicine.bef_bf==false && $scope.medicine.aft_bf==false && $scope.medicine.bef_ln==false && $scope.medicine.aft_ln==false && $scope.medicine.bef_dn==false&& $scope.medicine.aft_dn==false){
+			$scope.medicine.sos=true;
 		}
+		var resource_api = $resource('api/medicines');
+		resource_api.save($scope.medicine,function(){
+			$location.path('/');
+		});
 	};
 }]);
 

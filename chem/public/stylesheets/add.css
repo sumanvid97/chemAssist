@@ -1,7 +1,7 @@
 .section-heading {
 	border-bottom:1%;
 	solid:#6ADAE1;
-	color:#E63714;
+	color:#555aaa;
 	font-weight:bold;
 	font-size:175%
 }
@@ -15,6 +15,12 @@
 	right: 0;
 	bottom: 0;
 	left: 0;
+}
+.form-control{
+	border-radius: 5px;
+	width:30%;
+	height: 20px;
+	border-width: 6px;
 }
 @media only screen 
 	and (max-width: 768px) {

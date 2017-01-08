@@ -1,9 +1,56 @@
-<div>
-
-  <tabset>
-    <tab heading="<span>hello</span><em>1</em>">One</tab>
-    <tab heading="Two">Two</tab>
-    <tab heading="Three">Three</tab>
-  </tabset>
-
+<div id="home_head" ng-init="act_tab=1">
+	<div class="navbar nav-pills">
+		<div ng-click="act_tab=1" id="tab" ng-class="{active: act_tab==1}">Before Breakfast</div>
+		<div  ng-click="act_tab=2" id="tab" ng-class="{active: act_tab==2}">After Breakfast</div>
+		<div ng-click="act_tab=3" id="tab" ng-class="{active: act_tab==3}">Before Lunch</div>
+		<div ng-click="act_tab=4" id="tab" ng-class="{active: act_tab==4}">After Lunch</div>
+		<div ng-click="act_tab=5" id="tab" ng-class="{active: act_tab==5}">Before Dinner</div>
+		<div ng-click="act_tab=6" id="tab" ng-class="{active: act_tab==6}">After Dinner</div>
+		<div ng-click="act_tab=7" id="tab" ng-class="{active: act_tab==7}">SOS</div>
+	</div>
 </div>
+
+<div id="content" ng-show="act_tab==1">
+	<div ng-repeat="medi in medicines|filter:{bef_bf:true}">
+		<div id="pic_collection"><h3>{{medi.medi_name}}</h3></div>
+		<div id="pic_collection"><h3>{{medi.pill_no}}</h3></div>
+	</div>
+</div>
+<div id="content" ng-show="act_tab==2">
+	<div ng-repeat="medi in medicines|filter:{aft_bf:true}">
+		<div id="pic_collection"><h3>{{medi.medi_name}}</h3></div>
+		<div id="pic_collection"><h3>{{medi.pill_no}}</h3></div>
+	</div>
+</div>
+<div id="content" ng-show="act_tab==3">
+	<div ng-repeat="medi in medicines|filter:{bef_ln:true}">
+		<div id="pic_collection"><h3>{{medi.medi_name}}</h3></div>
+		<div id="pic_collection"><h3>{{medi.pill_no}}</h3></div>
+	</div>
+</div>
+<div id="content" ng-show="act_tab==4">
+	<div ng-repeat="medi in medicines|filter:{aft_ln:true}">
+		<div id="pic_collection"><h3>{{medi.medi_name}}</h3></div>
+		<div id="pic_collection"><h3>{{medi.pill_no}}</h3></div>
+	</div>
+</div>
+<div id="content" ng-show="act_tab==5">
+	<div ng-repeat="medi in medicines|filter:{bef_dn:true}">
+		<div id="pic_collection"><h3>{{medi.medi_name}}</h3></div>
+		<div id="pic_collection"><h3>{{medi.pill_no}}</h3></div>
+	</div>
+</div>
+<div id="content" ng-show="act_tab==6">
+	<div ng-repeat="medi in medicines|filter:{aft_dn:true}">
+		<div id="pic_collection"><h3>{{medi.medi_name}}</h3></div>
+		<div id="pic_collection"><h3>{{medi.pill_no}}</h3></div>
+	</div>
+</div>
+<div id="content" ng-show="act_tab==7">
+	<div ng-repeat="medi in medicines|filter:{sos:true}">
+		<div id="pic_collection"><h3>{{medi.medi_name}}</h3></div>
+		<div id="pic_collection"><h3>{{medi.pill_no}}</h3></div>
+	</div>
+</div>
+
+<div class="btnn"><a href="/#/add-a-medicine">Add a medicine</a></div>
