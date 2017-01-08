@@ -6,15 +6,15 @@ app.config(['$routeProvider' , function($routeProvider){
 			templateUrl : 'partials/home.html',
 			controller : 'HomeCtrl'
 		})
-		.when('/add-an-event', {
+		.when('/add-a-medicine', {
             templateUrl: 'partials/add.html',
             controller : 'AddCtrl'
         })
-        .when('/mi_events/:id', {
+        .when('/edit-medicine/:id', {
 	        templateUrl: 'partials/add.html',
 	        controller: 'EditCtrl'
 	    })
-	    .when('/delete-an-event/:id', {
+	    .when('/delete-medicine/:id', {
 	        templateUrl: 'partials/delete.html',
 	        controller : 'DeleteCtrl'
 	    })
@@ -25,7 +25,7 @@ app.config(['$routeProvider' , function($routeProvider){
 
 
 app.controller('HomeCtrl',['$scope', '$resource', function($scope, $resource){
-	var Medicines = $resource('/api/medicines');
+	var resource_api = $resource('/api/medicines');
 	resource_api.query(function(medicines){
 		$scope.medicines = medicines;
 	});
