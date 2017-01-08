@@ -12,44 +12,51 @@
 
 <div id="content" ng-show="act_tab==1">
 	<div ng-repeat="medi in medicines|filter:{bef_bf:true}">
-		<div id="pic_collection"><h3>{{medi.medi_name}}</h3></div>
+		<div id="pic_collection"><h3><a href="/#/edit-medicine/{{medi._id}}">{{medi.medi_name}}</a></h3></div>
 		<div id="pic_collection"><h3>{{medi.pill_no}}</h3></div>
+		<div id="pic_collection"><a href="/#/delete-medicine/{{medi._id}}">Delete</a></div>
 	</div>
 </div>
 <div id="content" ng-show="act_tab==2">
 	<div ng-repeat="medi in medicines|filter:{aft_bf:true}">
-		<div id="pic_collection"><h3>{{medi.medi_name}}</h3></div>
+		<div id="pic_collection"><h3><a href="/#/edit-medicine/{{medi._id}}">{{medi.medi_name}}</a></h3></div>
 		<div id="pic_collection"><h3>{{medi.pill_no}}</h3></div>
+		<div id="pic_collection"><a href="/#/delete-medicine/{{medi._id}}">Delete</a></div>
 	</div>
 </div>
 <div id="content" ng-show="act_tab==3">
 	<div ng-repeat="medi in medicines|filter:{bef_ln:true}">
-		<div id="pic_collection"><h3>{{medi.medi_name}}</h3></div>
+		<div id="pic_collection"><h3><a href="/#/edit-medicine/{{medi._id}}">{{medi.medi_name}}</a></h3></div>
 		<div id="pic_collection"><h3>{{medi.pill_no}}</h3></div>
+		<div id="pic_collection"><a href="/#/delete-medicine/{{medi._id}}">Delete</a></div>
 	</div>
 </div>
 <div id="content" ng-show="act_tab==4">
 	<div ng-repeat="medi in medicines|filter:{aft_ln:true}">
-		<div id="pic_collection"><h3>{{medi.medi_name}}</h3></div>
+		<div id="pic_collection"><h3><a href="/#/edit-medicine/{{medi._id}}">{{medi.medi_name}}</a></h3></div>
 		<div id="pic_collection"><h3>{{medi.pill_no}}</h3></div>
+		<div id="pic_collection"><a href="/#/delete-medicine/{{medi._id}}">Delete</a></div>
 	</div>
 </div>
 <div id="content" ng-show="act_tab==5">
 	<div ng-repeat="medi in medicines|filter:{bef_dn:true}">
-		<div id="pic_collection"><h3>{{medi.medi_name}}</h3></div>
+		<div id="pic_collection"><h3><a href="/#/edit-medicine/{{medi._id}}">{{medi.medi_name}}</a></h3></div>
 		<div id="pic_collection"><h3>{{medi.pill_no}}</h3></div>
+		<div id="pic_collection"><a href="/#/delete-medicine/{{medi._id}}">Delete</a></div>
 	</div>
 </div>
 <div id="content" ng-show="act_tab==6">
 	<div ng-repeat="medi in medicines|filter:{aft_dn:true}">
-		<div id="pic_collection"><h3>{{medi.medi_name}}</h3></div>
+		<div id="pic_collection"><h3><a href="/#/edit-medicine/{{medi._id}}">{{medi.medi_name}}</a></h3></div>
 		<div id="pic_collection"><h3>{{medi.pill_no}}</h3></div>
+		<div id="pic_collection"><a href="/#/delete-medicine/{{medi._id}}">Delete</a></div>
 	</div>
 </div>
 <div id="content" ng-show="act_tab==7">
 	<div ng-repeat="medi in medicines|filter:{sos:true}">
-		<div id="pic_collection"><h3>{{medi.medi_name}}</h3></div>
+		<div id="pic_collection"><h3><a href="/#/edit-medicine/{{medi._id}}">{{medi.medi_name}}</a></h3></div>
 		<div id="pic_collection"><h3>{{medi.pill_no}}</h3></div>
+		<div id="pic_collection"><a href="/#/delete-medicine/{{medi._id}}">Delete</a></div>
 	</div>
 </div>
 
